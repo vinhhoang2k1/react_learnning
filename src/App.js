@@ -184,24 +184,36 @@ const courses = [
   }
 ]
 
-function PostItem(props) {
+function PostItem({ course, onClick }) {
 
-  console.log(props);
+  // let namCourse = {{course.title}}
   return (
     <>
-      <h2>{props.title}</h2>
-      <p>{props.description}</p>
+      <h2>{course.title}</h2>
+      <img src={course.thumbnail_cdn}></img>
+      <p>{course.description}</p>
+      <button
+        onClick={() => onClick(course)}
+      >
+        click me
+      </button>
     </>
   )
+}
+
+function handleClick(course) {
+  console.log(course.title);
 }
 
 class App extends Component {
   render() {
     return (
       courses.map((course, index) => (
+
         <PostItem key={index}
-          title={course.title}
-          description={course.description}
+          course={course}
+          onClick={handleClick}
+
         />
       ))
     );
