@@ -14,12 +14,10 @@ export default function UseMemo() {
             price: +price
         }])
     }
-    // useEffect(() => {
-    //     setName('')
-    //     setPrice('')
-    // }, [products])
-
-
+    useEffect(() => {
+        setName('')
+        setPrice('')
+    }, [products])
 
     const total = useMemo(() => {
         const result = products.reduce((result, prod) => {
