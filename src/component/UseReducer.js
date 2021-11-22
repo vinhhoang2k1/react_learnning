@@ -1,32 +1,33 @@
 import { useState, useReducer } from 'react'
 /** 
- * init state 
- * actions
+ * init state  : 0
+ * actions : up( state + 1) / down(state - 1)
  * reducer
- * dispatch
+ * dispatch : kích hoạt action
 */
 
-const init = 0;
 
-const UP_ACTION = "up";
-const DOWN_ACTION = "down";
+// init state
+const initState = 0;
 
-const reduce = (state, action) => {
+// init action
+const UP_ACTION = 'up'
+const DOWN_ACTION = 'down'
+// reducer
+
+const reducer = (state, action) => {
     switch (action) {
         case UP_ACTION:
-            return state + 1;
+            return state + 1
         case DOWN_ACTION:
-            return state - 1;
-
+            return state - 1
         default:
-            throw new Error('invalid action')
-
+            console.error("invalid case");
     }
 }
+export default function UseReducer({value}) {
 
-export default function UseReducer() {
-
-    const [count, dispatch] = useReducer(reduce, init);
+    const [count, dispatch] = useReducer(reducer, value)
     return (
         <div>
             <h2>{count}</h2>

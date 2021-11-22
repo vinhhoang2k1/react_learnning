@@ -1,22 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter } from "react-router-dom"
-import { ThemeProvider } from "./component/ThemContext";
-import App from "./App"
-import UseEffect from "./learn/UseEffect";
-
-
-
+import Mua from "./component/Mua";
 
 function render() {
     return (
-        // <ThemeProvider>
-        //     <BrowserRouter>
-        //         <App />
-        //     </BrowserRouter>
-        // </ThemeProvider>
         <>
-            <UseEffect />
+            <Mua />
         </>
 
     )
