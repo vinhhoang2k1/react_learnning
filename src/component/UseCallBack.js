@@ -1,6 +1,6 @@
 import { useEffect, useState, useCallback } from "react";
 import Memo from "./Memo";
-//useCallBack() việc component cha re-render sẽ không ảnh hưởng tới component con 
+//useCallBack() việc component cha re-render sẽ không ảnh hưởng tới component con nhưng component con phải dùng memo thì mời có nghĩa
 function UseCallBack() {
 
     const [count, setcount] = useState(0)

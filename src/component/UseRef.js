@@ -1,6 +1,7 @@
 import { useState, useRef } from 'react';
 import Memo from './Memo';
 //useRef luon trả về 1 object và  syntax UseRef(gia_tri_khoi_tao)
+//giữ giá trị không thay đổi 
 
 
 export default function UseRef() {
